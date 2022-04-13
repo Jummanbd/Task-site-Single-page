@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+<!-- loading -->
+<div class="loader">
+  <div class="spinner"></div>
+</div>
+  <div class="pt-wrapper">
+      <div class="slide-menu">
+          <header class="header">
+            <div class="slide-bar-times">
+              <i class="fa fa-times"></i>
+            </div>
+            <div class="logo-wrap">
+              <img src="images/logo.png" alt=""> Tasks.IO
+            </div>
+            <div class="slide-bar-main-title">
+              <h5><i class="fa fa-list"></i> My Tasks <span class="badge badge-secondary">20</span></h5>
+            </div>
+            <hr>
+            <nav class="main-nav">
+              <ul>
+                  <li>
+                    <a href="index.html" class="active"><i class="fa fa-home"></i> Overview</a>
+                  </li>
+                  <li>
+                    <a href="project.html"><i class="fa fa-industry" ></i> Project</a>
+                  </li>
+                  <li>
+                    <a href="kanban.html"><i class="fa fa-th-large"></i> Kanban</a>
+                  </li>
+                  <li>
+                    <a href="calculator.html"><i class="fa fa-calendar"></i> Calendar</a>
+                  </li>
+                  <li>
+                    <a href="teams.html"><i class="fa fa-users" ></i> Teams</a>
+                  </li>
+                <hr>
+                <li>
+                  <a href="error.html"><i class="fa fa-exclamation-triangle"></i>404</a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <div class="nav-bar">
+            <div class="nav-top-bar padding-section">
+                <div class="top-nav">
+                  <div class="menu-bar">
+                    <i class="fa fa-bars" ></i>
+                  </div>
+                  <div class="search-box">
+                    <form class="form-group">
+                      <input type="text" class="form-control" placeholder="Search in task.io">
+                      <i class="fa fa-search"></i>
+                    </form>
+                  </div>
+                </div>
+                 <div class="slide-right text-right">
+                    <div class="sub-icon">
+                       <i class="fa fa-plus-circle"></i>
+                       <i class="fa fa-th"></i>
+                       <div class="bell-wrapper">
+                        <i class="fa fa-bell"></i>
+                         <div class="bell-wrap">
+                           <h3 class="text-center">Notifications</h3>
+                          <div class="team-profile">
+                            <div class="user-img flex-shrink-0">
+                            <img src="images/team1.png" alt="">
+                            </div>
+                            <div class="team-heading">
+                              <h5>Amanda Richard</h5>
+                              <p class="dec_text">AmandExmple.Com</p>
+                            </div>
+                          </div>
+
+                          <div class="team-profile">
+                            <div class="user-img flex-shrink-0">
+                            <img src="images/team4.png" alt="">
+                            </div>
+                            <div class="team-heading">
+                              <h5>Don Richard</h5>
+                              <p class="dec_text">doneExm.Com</p>
+                            </div>
+                          </div>
+                         </div>
+                       </div>
+                    </div>
+                  <div class="profile">
+                    <img src="images/profile.png" alt="">
+                  </div>
+                </div>
+            </div>
+          </div>
+             <div class="overview pages">
+               <div class="row">
+                 <div class="col-lg-7">
+                  <div class="overvierw-project ">
+                    <div class="section-inner chart-height">
+                      <div class="page-content margin-top">
+                          <div class="chart-box text-center">
+                            <div class="sec-heading mb-3">
+                              <h1 class="sec-title ">My Hours By Activities</h1>
+                            </div>
+                               <canvas id="myChart" width="250" height="150" class="chart-box"></canvas> 
+                          </div>
+  
+                      </div>
+                  </div>
+                  </div>
+                  <div class="project ">
+                  <div class="section-inner">
+                        <div class="page-content">
+                            <div class="sec-heading project-wrapper">
+                              <h1 class="sec-title ">Projects</h1>
+                              <button href="#" class="theme-btn">View All <i class="fa fa-chevron-right"></i></button>
+                            </div>
+                              <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Project Name</th>
+                                        <th>Project Type</th>
+                                        <th>End Date</th>
+                                        <th>Status</th>
+                                        <th>Project Progress</th>
+                                      </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                          <td><h5>Job Finder</h5></td>
+                                          <td><div class="project-text">Web App</div></td>
+                                          <td>
+                                            <div class="project-text">
+                                                Dec 03 2021
+                                            </div>
+                                          </td>
+                                          <td>
+                                              <h5><span class="badge badge-info">in Progress</span></h5>
+                                          </td>
+                                          <td>
+                                              <div class="progress">
+                                                <div class="progress-bar bg-warning" style="width:80%"></div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                        </tr>
+                                    </thead>
+                                    <!-- item -->
+                                    <thead>
+                                      <tr>
+                                        <td><h5>Hotel Booking</h5></td>
+                                        <td><div class="project-text">Landing</div></td>
+                                          <td>
+                                            <div class="project-text">
+                                              Nov 03 2021
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <h5><span class="badge bg-success">Compieted</span></h5>
+                                          </td>
+                                          <td>
+                                            <div class="progress">
+                                              <div class="progress-bar bg-warning" style="width:30%"></div>
+                                            </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                      </tr>
+                                    </thead>
+                                    <!-- item -->
+                                    <thead>
+                                    <tr>
+                                      <td><h5>Forex Apply</h5></td>
+                                      <td><div class="project-text">Mobile App</div></td>
+                                        <td>
+                                          <div class="project-text">
+                                            Apr 03 2019
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <h5><span class="badge bg-danger">Triage</span></h5>
+                                        </td>
+                                        <td>
+                                          <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width:70%"></div>
+                                          </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                  </thead>
+                                  <!-- item -->
+                                  <thead>
+                                  <tr>
+                                    <td><h5>Chat Apply</h5></td>
+                                    <td><div class="project-text">Cross Platform</div></td>
+                                      <td>
+                                        <div class="project-text">
+                                          Jun 10 2018
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <h5><span class="badge badge-secondary">QA</span></h5>
+                                      </td>
+                                      <td>
+                                        <div class="progress">
+                                          <div class="progress-bar bg-warning" style="width:20%"></div>
+                                        </div>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                  </tr>
+                                </thead>
+                                <!-- item -->
+                                  <!-- item -->
+                                  <thead>
+                                  <tr>
+                                    <td><h5>Designer</h5></td>
+                                    <td><div class="project-text">Landing Pages</div></td>
+                                      <td>
+                                        <div class="project-text">
+                                          Aug 10 2022
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <h5><span class="badge bg-warning">Proposals</span></h5>
+                                      </td>
+                                      <td>
+                                        <div class="progress">
+                                          <div class="progress-bar bg-warning" style="width:100%"></div>
+                                        </div>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                  </tr>
+                                </thead>
+                                <!-- item -->
+                                </table>
+                              </div>
+                        </div>
+                  </div>
+                  </div>
+
+                  <div class="team ">
+                    <div class="section-inner">
+                          <div class="page-content">
+                            <div class="sec-heading project-wrapper">
+                                <h1 class="sec-title ">Team</h1>
+                              <button href="#" class="theme-btn">View All <i class="fa fa-chevron-right"></i></button>
+                            </div>
+                            <div class="table-responsive">
+                          <table class="table teams">
+                            <thead>
+                              <tr>
+                              <th>Name</th>
+                              <th>Position</th>
+                              <th>Closed Issues</th>
+                                <th>Completed Tasks</th>
+                                </tr>
+                              </thead>
+                              <thead>
+                                <tr >
+                                  <td>
+                                    <div class="team-profile">
+                                        <div class="user-img flex-shrink-0">
+                                        <img src="images/team1.png" alt="">
+                                        </div>
+                                        <div class="team-heading">
+                                          <h5>Amanda Richard</h5>
+                                          <p class="dec_text">AmandaExmple.Com</p>
+                                        </div>
+                                    </div>
+                                  </td> 
+                                    <td>
+                                      <p class="items-text mb-0">Director</p>
+                                      <p class="dec_text">Humman Resourec</p>
+                                    </td>
+                                    <td>
+                                      <p class="text-center number-text ">15</p>
+                                    </td>
+                                    <td>
+                                      <div class="sms-text">
+                                        <p class="number-text">22</p>
+                                        <i class="fa fa-envelope"></i>
+                                      </div>
+                                    </td>
+                                </tr>
+                              </thead>
+                                <!-- item -->
+                                <thead>
+                              <tr >
+                                <td>
+                                  <div class="team-profile">
+                                      <div class="user-img flex-shrink-0">
+                                      <img src="images/team2.png" alt="">
+                                      </div>
+                                      <div class="team-heading">
+                                        <h5>Rasel Ahmed</h5>
+                                        <p class="dec_text">ResleExmple.Com</p>
+                                      </div>
+                                  </div>
+                                </td> 
+                                  <td>
+                                    <p class="items-text mb-0">Seller</p>
+                                    <p class="dec_text">sales</p>
+                                  </td>
+                                  <td>
+                                    <p class="text-center number-text ">09</p>
+                                  </td>
+                                  <td>
+                                    <div class="sms-text">
+                                      <p class="number-text">40</p>
+                                      <i class="fa fa-envelope"></i>
+                                    </div>
+                                  </td>
+                              </tr>
+                                </thead>
+                                  <!-- item -->
+                                <thead>
+                                <tr >
+                                  <td>
+                                    <div class="team-profile">
+                                      <div class="user-img flex-shrink-0">
+                                        <img src="images/team3.png" alt="">
+                                      </div>
+                                      <div class="team-heading">
+                                        <h5>Weslar Morgan</h5>
+                                          <p class="dec_text">MorganExmple.Com</p>
+                                      </div>
+                                    </div>
+                                  </td> 
+                                  <td>
+                                    <p class="items-text mb-0">Developer</p>
+                                    <p class="dec_text">Mobile App</p>
+                                  </td>
+                                  <td>
+                                    <p class="text-center number-text ">47</p>
+                                  </td>
+                                  <td>
+                                    <div class="sms-text">
+                                        <p class="number-text">51</p>
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                  </td>
+                                </tr>
+                                </thead>
+                                  <!-- item -->
+                                <thead>
+                                <tr >
+                                  <td>
+                                    <div class="team-profile">
+                                      <div class="user-img flex-shrink-0">
+                                        <img src="images/team4.png" alt="">
+                                      </div>
+                                      <div class="team-heading">
+                                        <h5>Zana Ahmed</h5>
+                                          <p class="dec_text">ZanaExmple.Com</p>
+                                      </div>
+                                    </div>
+                                  </td> 
+                                  <td>
+                                    <p class="items-text mb-0">Accountant</p>
+                                    <p class="dec_text">Finance</p>
+                                  </td>
+                                  <td>
+                                    <p class="text-center number-text ">90</p>
+                                  </td>
+                                  <td>
+                                    <div class="sms-text">
+                                        <p class="number-text">71</p>
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                  </td>
+                                </tr>
+                                </thead>
+                                  <!-- item -->
+                                  <thead>
+                                    <tr >
+                                      <td>
+                                        <div class="team-profile">
+                                          <div class="user-img flex-shrink-0">
+                                            <img src="images/team5.png" alt="">
+                                          </div>
+                                          <div class="team-heading">
+                                            <h5>Fahim Ahmed</h5>
+                                              <p class="dec_text">FahimExmple.Com</p>
+                                          </div>
+                                        </div>
+                                      </td> 
+                                      <td>
+                                        <p class="items-text mb-0">Designer</p>
+                                        <p class="dec_text">Finance</p>
+                                      </td>
+                                      <td>
+                                        <p class="text-center number-text ">78</p>
+                                      </td>
+                                      <td>
+                                        <div class="sms-text">
+                                            <p class="number-text">65</p>
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </thead>
+                                  <!-- item -->
+                          </table>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="col-lg-5">
+                   <div class="slide-blog Overview Pages">
+                     <div class="miles-wrapper section-inner">
+                        <div class="page-content margin-top res_top">
+                          <div class="sec-heading mb-3">
+                            <h1 class="sec-title ">Milestones</h1>
+                          </div>
+                            <div class="mile-item">
+                              <div class="mile-dec">
+                                  <div class="mile-dec-box">
+                                    <p class="text-gray">JAN</p>
+                                    <P>13</P>
+                                  </div>
+                                   <div class="mile-dec-title">
+                                    <h5>Learn A New Language</h5>
+                                    <p>Anthropology</p>
+                                  </div>
+
+                              </div>
+                              <div class="progress-wrapper">
+                                <div class="progress mile-progress">
+                                  <div class="progress-bar bg-warning mile-progress" style="width:75%"> </div>
+                                 
+                              </div>
+                                <p>75% complete</p>
+                              </div>
+
+                            </div>
+                            <!-- mile-item -->
+                            <hr>
+                            <div class="mile-item">
+                              <div class="mile-dec">
+                                  <div class="mile-dec-box">
+                                    <p class="text-gray">JAN</p>
+                                    <P>12</P>
+                                  </div>
+                                   <div class="mile-dec-title">
+                                    <h5>Mentor A Young Person in my field</h5>
+                                    <p>Anthropology</p>
+                                  </div>
+
+                              </div>
+                              <div class="progress-wrapper">
+                                <div class="progress mile-progress">
+                                  <div class="progress-bar bg-warning mile-progress" style="width:45%"> </div>
+                                 
+                              </div>
+                                <p>45% complete</p>
+                              </div>
+
+                            </div>
+                            <!-- mile-item -->
+                            <hr>
+                            <div class="mile-item">
+                              <div class="mile-dec">
+                                  <div class="mile-dec-box">
+                                    <p class="text-gray">JAN</p>
+                                    <P>16</P>
+                                  </div>
+                                   <div class="mile-dec-title">
+                                    <h5>Set Up And Stick With A Budget</h5>
+                                    <p>Anthropology</p>
+                                  </div>
+
+                              </div>
+                              <div class="progress-wrapper">
+                                <div class="progress mile-progress">
+                                  <div class="progress-bar bg-warning mile-progress" style="width:90%"> </div>
+                                 
+                              </div>
+                                <p>90% complete</p>
+                              </div>
+
+                            </div>
+                            <!-- mile-item -->
+                        </div>
+                     </div>
+                   </div>
+                   <!-- slide-blog end -->
+                   <div class="slide-blog Overview Pages">
+                    <div class="miles-wrapper section-inner">
+                       <div class="page-content">
+                         <div class="sec-heading mb-3">
+                           <h1 class="sec-title ">Milestones</h1>
+                         </div>
+                         <!-- calendar -->
+                          <div class="calendar-area">
+                            <div class="calendar">
+                              <div class="month">
+                                <i class="fas fa-angle-left prev"></i>
+                                <div class="date">
+                                  <h1></h1>
+                                  <p></p>
+                                </div>
+                                <i class="fas fa-angle-right next"></i>
+                              </div>
+                              <div class="weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                              </div>
+                              <div class="days"></div>
+                            </div>
+                          </div>
+                        <!-- end calendar -->
+
+                        <div class="calendar-item">
+                          <div class="calendar-title d-flex">
+                            <div class="cricle"></div>
+                               <div>
+                                <h6>Daliy SCRUM</h6>
+                                <p class="cricle_decs"><i class="fa fa-clock" ></i> Zoom</p>
+                               </div>
+                          </div>
+                           <p class="btn-items theme-btn">08:00 AM</p>
+                        </div>
+                        <!-- calendar-item -->
+                        <hr>
+                        <div class="calendar-item">
+                          <div class="calendar-title d-flex">
+                            <div class="cricle cricle-bg2"></div>
+                               <div>
+                                <h6>Meeting with  Client</h6>
+                                <p class="cricle_decs"><i class="fa fa-clock" ></i> Zoom</p>
+                               </div>
+                          </div>
+                           <p class="btn-items theme-btn">11:00 AM</p>
+                        </div>
+                        <!-- calendar-item -->
+                        <hr>
+                        <div class="calendar-item">
+                          <div class="calendar-title d-flex">
+                            <div class="cricle cricle-bg3"></div>
+                               <div>
+                                <h6>Fllow Up On Project</h6>
+                                <p class="cricle_decs"><i class="fa fa-clock" ></i> Skype</p>
+                               </div>
+                          </div>
+                           <p class="btn-items theme-btn">11:00 AM</p>
+                        </div>
+                        <!-- calendar-item -->
+                       </div>
+                    </div>
+                  </div>
+                 </div>
+               </div>
+            </div>
+      </div>
+<!-- slide menu end -->
+<!-- model-wrapper -->
+      <div class="model-wrapper">
+            <div class="model-wrap">
+                <div class="model-header">
+                    <div class="model-section">
+                      <h2 class="model-title">Employee Invitation</h2>
+                      <i class="fa fa-times model-close"></i>
+                    </div>
+                    <hr>
+                    <div class="search-box">
+                      <form class="form-group">
+                        <input type="text" class="form-control" placeholder="Search in task.io">
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                </div>
+                <div class="model-admin">
+                  <h6>Employee</h6>
+                  <div class="model-item">
+                       <div class="model-item-wrap">
+                        <div class="user-img flex-shrink-0">
+                          <img src="images/team2.png" alt="">
+                          </div>
+                           <div class="model-email">
+                             <h3>Rachel Carr(you)</h3>
+                             <p class="dec-text">rachel.carr@gmail.com</p>
+                           </div>
+                       </div>
+                       <div class="admit-wrap">
+                         <p>Admit</p>
+                       </div>
+                  </div>
+
+                  <div class="model-item">
+                    <div class="model-item-wrap">
+                     <div class="user-img flex-shrink-0">
+                       <img src="images/team3.png" alt="">
+                       </div>
+                        <div class="model-email">
+                          <h3>Rana Ahmed</h3>
+                          <p class="dec-text">ranaahmed@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="admit-wrap">
+                      <p>Admit</p>
+                    </div>
+                 </div>
+                 <div class="model-item">
+                  <div class="model-item-wrap">
+                   <div class="user-img flex-shrink-0">
+                     <img src="images/team4.png" alt="">
+                     </div>
+                      <div class="model-email">
+                        <h3>Farhan Ahmed</h3>
+                        <p class="dec-text">farhanahmed@gmail.com</p>
+                      </div>
+                  </div>
+                  <div class="admit-wrap">
+                    <p>Admit</p>
+                  </div>
+               </div>
+                </div>
+            </div>
+      </div>
+  </div>
+
+
+
+    <!-- js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      
+// calendar
+
+const date = new Date();
+
+const renderCalendar = () => {
+  date.setDate(1);
+
+  const monthDays = document.querySelector(".days");
+
+  const lastDay = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0
+  ).getDate();
+
+  const prevLastDay = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    0
+  ).getDate();
+
+  const firstDayIndex = date.getDay();
+
+  const lastDayIndex = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0
+  ).getDay();
+
+  const nextDays = 7 - lastDayIndex - 1;
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+
+  document.querySelector(".date p").innerHTML = new Date().toDateString();
+
+  let days = "";
+
+  for (let x = firstDayIndex; x > 0; x--) {
+    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+  }
+
+  for (let i = 1; i <= lastDay; i++) {
+    if (
+      i === new Date().getDate() &&
+      date.getMonth() === new Date().getMonth()
+    ) {
+      days += `<div class="today">${i}</div>`;
+    } else {
+      days += `<div class = 'day'>${i}</div>`;
+    }
+  }
+
+  for (let j = 1; j <= nextDays; j++) {
+    days += `<div class="next-date">${j}</div>`;
+    monthDays.innerHTML = days;
+  }
+};
+
+document.querySelector(".prev").addEventListener("click", () => {
+  date.setMonth(date.getMonth() - 1);
+  renderCalendar();
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+  date.setMonth(date.getMonth() + 1);
+  renderCalendar();
+});
+
+renderCalendar();
+
+    </script>
+  </body>
+</html>
